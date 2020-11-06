@@ -59,7 +59,7 @@ class ListLeagues extends React.Component {
 
     componentDidMount() {
         console.log("prop", this.props.value)
-        fetch("https://api.pandascore.co"+ this.props.value +"/leagues?token=Li9VL-Go-0xB6lVrSiwOXf8KIuQSCTD_FO-QDmBLG9DvEdWf-qg&per_page=5&page=1")
+        fetch("https://api.pandascore.co/leagues?token=Li9VL-Go-0xB6lVrSiwOXf8KIuQSCTD_FO-QDmBLG9DvEdWf-qg&per_page=5&page=1")
             .then(res => res.json())
             .then(
                 (result) => {

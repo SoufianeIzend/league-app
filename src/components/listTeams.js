@@ -56,7 +56,7 @@ class ListTeams extends React.Component {
     }
 
     componentDidMount() {
-        fetch("https://api.pandascore.co"+ this.props.value+"/teams?token=Li9VL-Go-0xB6lVrSiwOXf8KIuQSCTD_FO-QDmBLG9DvEdWf-qg&per_page=5&page=1")
+        fetch("https://api.pandascore.co/teams?token=Li9VL-Go-0xB6lVrSiwOXf8KIuQSCTD_FO-QDmBLG9DvEdWf-qg&per_page=5&page=1")
             .then(res => res.json())
             .then(
                 (result) => {
