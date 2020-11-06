@@ -20,7 +20,7 @@ class LeagueDetail extends React.Component {
     }
 
     componentDidMount() {
-        fetch("https://api.pandascore.co/leagues/" + this.props.match.params.leagueId + "?token=Li9VL-Go-0xB6lVrSiwOXf8KIuQSCTD_FO-QDmBLG9DvEdWf-qg")
+        fetch("/api/leagues/" + this.props.match.params.leagueId + "?token=Li9VL-Go-0xB6lVrSiwOXf8KIuQSCTD_FO-QDmBLG9DvEdWf-qg")
             .then(res => res.json())
             .then(
                 (result) => {

@@ -20,7 +20,7 @@ class TeamDetail extends React.Component {
 
     componentDidMount() {
 
-        fetch("https://api.pandascore.co/teams/" + this.props.match.params.teamId + "?token=Li9VL-Go-0xB6lVrSiwOXf8KIuQSCTD_FO-QDmBLG9DvEdWf-qg")
+        fetch("/api/teams/" + this.props.match.params.teamId + "?token=Li9VL-Go-0xB6lVrSiwOXf8KIuQSCTD_FO-QDmBLG9DvEdWf-qg")
             .then(res => res.json())
             .then(
                 (result) => {

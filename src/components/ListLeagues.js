@@ -28,7 +28,7 @@ class ListLeagues extends React.Component {
 
     filterPage = (filter) =>{
         this.setState({filter: filter})
-        fetch("https://api.pandascore.co"+filter+"/leagues?token=Li9VL-Go-0xB6lVrSiwOXf8KIuQSCTD_FO-QDmBLG9DvEdWf-qg&per_page=5&page=" + this.state.pageNumber)
+        fetch("/api"+filter+"/leagues?token=Li9VL-Go-0xB6lVrSiwOXf8KIuQSCTD_FO-QDmBLG9DvEdWf-qg&per_page=5&page=" + this.state.pageNumber)
             .then(res => res.json())
             .then(
                 (result) => {
@@ -43,7 +43,7 @@ class ListLeagues extends React.Component {
     }
     changePage = (event, value) =>{
         this.setState({pageNumber: value})
-        fetch("https://api.pandascore.co"+this.state.filter+"/leagues?token=Li9VL-Go-0xB6lVrSiwOXf8KIuQSCTD_FO-QDmBLG9DvEdWf-qg&per_page=5&page=" + value)
+        fetch("/api"+this.state.filter+"/leagues?token=Li9VL-Go-0xB6lVrSiwOXf8KIuQSCTD_FO-QDmBLG9DvEdWf-qg&per_page=5&page=" + value)
             .then(res => res.json())
             .then(
                 (result) => {
@@ -59,7 +59,7 @@ class ListLeagues extends React.Component {
 
     componentDidMount() {
         console.log("prop", this.props.value)
-        fetch("https://api.pandascore.co/leagues?token=Li9VL-Go-0xB6lVrSiwOXf8KIuQSCTD_FO-QDmBLG9DvEdWf-qg&per_page=5&page=1")
+        fetch("/api/leagues?token=Li9VL-Go-0xB6lVrSiwOXf8KIuQSCTD_FO-QDmBLG9DvEdWf-qg&per_page=5&page=1")
             .then(res => res.json())
             .then(
                 (result) => {
